@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+  	<title>countdown.mehlhase.info</title>
+  	<meta name="description" content="">
+  	<meta name="author" content="Sascha Mehlhase">
+  	<meta name="theme-color" content="#eeeeee">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta property="og:image" content="media/icon-512.png">
+  	<link rel="shortcut icon" href="favicon.ico">
+  	<link rel="stylesheet" href="style.css">
+  	<link rel="manifest" href="countdown.webmanifest">
+  	<script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="timerbox">
+        <p class="timer_time"></p>
+        <div class="break"></div>
+        <p class="timer_message"></p>
+        <div class="setupbox">
+          <table>
+            <tr>
+              <td>
+                <input type="radio" id="countdown" name="setup_type" value="countdown" checked />
+              </td>
+              <td>counting down for:</td>
+              <td>
+                <input type="number" id="setup_count_d" name="setup_count_d" min="0" value="0" />d
+                <input type="number" id="setup_count_h" name="setup_count_h" min="0" value="0" />h
+                <input type="number" id="setup_count_m" name="setup_count_i" min="0" value="10" />m
+                <input type="number" id="setup_count_s" name="setup_count_s" min="0" value="0" />s
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="radio" id="countuntil" name="setup_type" value="countuntil" />
+              </td>
+              <td>counting down until:</td>
+              <td><input type="datetime-local" id="setup_time" name="setup_time"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>position:</td>
+              <td>
+                <select name="setup_position" id="setup_position">
+                  <option value="center" selected>centre</option>
+                  <option value="topright">top-right</option>
+                  <option value="right">right</option>
+                  <option value="bottomright">bottom-right</option>
+                  <option value="bottom">bottom</option>
+                  <option value="bottomleft">bottom-left</option>
+                  <option value="left">left</option>
+                  <option value="top-left">top-left</option>
+                  <option value="top">top</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>message counting:</td>
+              <td><input type="text" id="setup_message_count" name="setup_message_count" maxlength="30" value="until the next talk"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>message finished:</td>
+              <td><input type="text" id="setup_message_finish" name="setup_message_finish" maxlength="30" value="Time to talk!"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>format:</td>
+              <td>
+                <select name="setup_format" id="setup_format">
+                  <option value="dhms" selected>#d #h #' #"</option>
+                  <option value="dhm">#d #h #'</option>
+                  <option value="hms">#h #' #"</option>
+                  <option value="hm">#h #'</option>
+                  <option value="ms">#' #"</option>
+                  <option value="m">#'</option>
+                  <option value="s">#"</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><button id="setup_start" name="setup_start">start &amp; hide</button></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

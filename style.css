@@ -1,0 +1,92 @@
+/* countdown.mehlhase.info */
+/* (c) Sascha Mehlhase - kontakt@mehlhase.info */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-variant-emoji: text;
+}
+
+body {
+  background-color: rgba(0, 177, 64, 1);
+  font: 14px sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, a:visited {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timerbox {
+  position: absolute;
+  
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 1vh;
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 6vh;
+  
+  color: rgb(255, 255, 255);
+
+  margin: 3vh;
+  padding: 1vh;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.unit {
+  font-size: 3vh;
+}
+
+.timer_message {
+  font-size: 3.5vh;
+/*  display: none;*/
+}
+
+.setupbox {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 1vh;
+  font-size: 2vh;
+  padding: 1vh;
+}
+
+.setupbox input, .setupbox select, .setupbox button {
+  vertical-align: middle;
+  font-size: 2vh;
+  border: 0;
+  border-radius: 0.5vh;
+  padding: 2px;
+  margin: 2px;
+}
+
+.setupbox button {
+  cursor: pointer;
+}
+
+.setupbox input[type=number] {
+  width: 5vh;
+  text-align: right;
+}
